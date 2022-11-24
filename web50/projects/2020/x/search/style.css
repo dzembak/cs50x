@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* Headers */
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-top: 3rem;
+}
+h2 > span {border-bottom: 2px solid royalblue;}
+
+
+form {width:100%;}
+
+input[type="text"], 
+input[type="submit"] {
+    border: 0 none;
+    border-radius: 20px;
+    height: 33px;
+    padding: 5px 10px;
+    margin: 0 3px;
+    width: inherit;
+}
+
+input[type="text"] {
+    color:#333; 
+    line-height: 33px;
+    outline:0; 
+}
+
+input[type="text"]:focus {
+    color: black;
+}
+input[type="text"]:focus::placeholder {
+    color: transparent;
+    transition:all .2s ease-in-out;
+  }
+
+input[type="reset"] {
+    background-color: transparent;
+    border: 0 none;
+    color: #777;
+    height: 44px;
+    font-size: large;
+    font-weight: 400;
+}
+
+input[type="reset"]:hover {
+    color: black;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: royalblue;
+    color:#fff;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    box-shadow: 0 0 8px 2px rgb(0 128 0 / 50%);
+    transition:all .1s ease-in-out;
+}
+
+/* Menu */
+div.menu {
+    top: 50px;;
+    right: 0;
+    position: absolute;
+}
+div.menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+}
+div.menu > ul > li {
+    margin: 0;
+    padding: 0;
+}
+div.menu > ul > li.nav {
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 5px;
+    margin: -1px;
+}
+div.menu > ul > li > a {
+    margin: 0;
+    padding: 6px 12px;
+    display: block;
+    outline: 1px solid royalblue;
+    width: 112px;
+}
+div.menu > ul > li > a:hover,
+div.menu > ul > li.nav{
+    background-color: royalblue;
+    color: #fff;
+}
+
+div.serchblock, div.advserchblock {padding: 5% 20%;}
+
+div.searchfield {
+    display: grid;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    grid-template-columns: auto 30px 100px;
+    height: 44px;
+    background: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 30%);
+    border-radius: 24px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: calc(var(--center-width) + 38px);
+}
+
+div.searchfield:hover, div.searchfield:focus {
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 50%);
+    border-color: rgba(223,225,229,0);
+} 
+
+div.text {width: 95%;}
+div.reset {margin: 0;}
+div.button {margin: 6px 2px; width:99%;}
+
+
+/** Advanced **/
+div.advsearchfield {
+    display: grid;
+    grid-column-gap: 2px;
+    grid-row-gap: 10px;
+    grid-template-columns: 25% auto;
+}
+
+/* Advanced Form Submit Buttons */
+div.advsubmits {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 2px;
+    grid-template-columns: 33% 33% 33%;
+    height: 35px;
+    margin: 0 auto;
+    padding: 10px 3px;
+    width: 100%;
+}
+
+div.label {text-align: left; padding: 15px 10px;}
+
+div.advtext {
+    height: 44px;
+    background: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 30%);
+    border-radius: 24px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 95%;
+}
+
+div.advtext:hover, div.advtext:focus {
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 50%);
+    border-color: rgba(223,225,229,0);
+} 
+
+div.advreset {margin: 0;}
+div.button > input[type="reset"] {
+    background-color: #f3f3f3;
+    color: #333;
+    outline: 1px solid #333;
+    font-size: inherit;
+    border-radius: 20px;
+    height: 33px;
+    padding: 5px 10px;
+}
+
+div.button > input[type="reset"]:hover {
+    background-color: #333;
+    color: #fff;
+    transition:all .1s ease-in-out;
+}
+
+
+div.advbutton {margin:15px 2px; width:100%;}
+
+input[type="submit"].flbutton {
+    background-color: #fff;
+    color:royalblue;
+    outline: 1px solid royalblue;
+}
+
+input[type="submit"].flbutton:hover {
+    color: green;
+    outline: 1px solid green;
+    box-shadow: 0 0 8px 2px rgb(0 128 0 / 50%);
+    transition:all .1s ease-in-out;
+}
+
+
+/* Smartphones */
+@media screen and (max-width:639px) {
+    div.serchblock, div.advserchblock {
+        padding: 3% 0;
+        margin-top: 30%;
+    }
+    div.label {padding: 5px;}
+    div.advsearchfield {
+        grid-row-gap: 10px; 
+        grid-column-gap: 1px;
+        grid-template-columns: 35% auto;}
+    div.advtext {width: 90%;}
+    div.advsubmits {
+            grid-column-gap: 10px;
+            grid-template-columns: 31% 33% 31%;
+            width: 95%;
+        }
+        
+}
